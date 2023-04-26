@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import {FormBuilder, FormControl, FormGroup} from '@angular/forms';
 
 @Component({
-  selector: 'app-profile-editor',
-  templateUrl: './profile-editor.component.html',
-  styleUrls: ['./profile-editor.component.css']
+  selector: 'app-sections-list',
+  templateUrl: './sections-list.component.html',
+  styleUrls: ['./sections-list.component.css']
 })
-export class ProfileEditorComponent {
+export class SectionsListComponent {
   devices: FormGroup[] = [];
 
 

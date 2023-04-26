@@ -1,1 +1,259 @@
-/* You can add global styles to this file, and also import other style files */
+/* Global Styles */
+@import "~@ng-select/ng-select/themes/default.theme.css";
+
+
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  color: #264D73;
+  font-size: 2.5rem;
+}
+
+h2, h3 {
+  color: #444;
+  font-weight: lighter;
+}
+
+h3 {
+  font-size: 1.3rem;
+}
+
+span{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.15px;
+  color: #000000;
+}
+
+.flexbox{
+  display: flex;
+  align-items: center;
+  padding-top: 25px;
+}
+.down-flexbox{
+  display: flex;
+  align-items: center;
+  padding-top: 17px;
+  padding-bottom: 25px;
+}
+.block-container{
+  display: block;
+  padding-left: 26px;
+  position: relative;
+}
+
+body {
+  padding: .5rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+@media (min-width: 600px) {
+  body {
+    padding: 2rem;
+  }
+}
+
+body, input[text] {
+  color: #333;
+  font-family: Cambria, Georgia, serif;
+}
+
+a {
+  cursor: pointer;
+}
+
+button {
+  background-color: unset;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: black;
+  font-size: 1.2rem;
+  padding: 1rem;
+}
+
+button:disabled {
+  background-color: #eee;
+  color: #aaa;
+  cursor: auto;
+}
+
+.suffix{
+  position: absolute;
+  width: 48px;
+  height: 24px;
+  top: 6px;
+  right: 0;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: 0.15px;
+  color: #000000;
+  opacity: 0.6;
+}
+
+.suffix-select{
+  position: absolute;
+  width: 48px;
+  height: 24px;
+  top: 31px;
+  right: 30px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  color: #000000;
+  opacity: 0.6;
+}
+
+.button-line{
+  width: 34px;
+  right: 30px;
+  top: 17px;
+  border: 0.5px solid #E0E0E0;
+  transform: rotate(90deg);
+  position: absolute;
+}
+
+.button-line-select{
+  width: 34px;
+  right: 65px;
+  top: 42px;
+  border: 0.5px solid #E0E0E0;
+  transform: rotate(90deg);
+  position: absolute;
+}
+
+.title {
+  padding: 24px;
+  width: 36px;
+  height: 16px;
+  left: calc(50% - 36px / 2 - 258px);
+  top: 102px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 16px;
+  /* identical to box height, or 100% */
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.25px;
+  /* Black */
+  color: #000000;
+}
+
+
+.label {
+  height: 16px;
+  top: 142px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  /* identical to box height, or 114% */
+  margin-bottom: 9px;
+  display: flex;
+  align-items: center;
+  /* Black */
+  color: #000000;
+  opacity: 0.74;
+}
+
+.label-grey{
+  height: 15px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  padding-bottom: 9px;
+  line-height: 15px;
+  /* identical to box height */
+  letter-spacing: 1.25px;
+  text-transform: uppercase;
+  color: #6E6B7B;
+}
+
+.control-wrapper {
+  position: relative;
+  display: block;
+  margin-left: 24px;
+}
+
+.mdc-slider__track--active {
+  height: 2px !important;
+}
+
+
+.mat-mdc-slider.mat-primary {
+  --mdc-slider-handle-color: rgba(19, 83, 83, 1);
+  --mdc-slider-focus-handle-color: rgba(19, 83, 83, 1);
+  --mdc-slider-hover-handle-color: rgba(19, 83, 83, 1);
+  --mdc-slider-active-track-color: rgba(19, 83, 83, 1);
+  --mdc-slider-inactive-track-color: rgba(19, 83, 83, 1);
+  --mdc-slider-with-tick-marks-active-container-color: #fff;
+  --mdc-slider-with-tick-marks-inactive-container-color: rgba(19, 83, 83, 1);
+  --mat-mdc-slider-ripple-color: rgba(19, 83, 83, 1);
+  --mat-mdc-slider-hover-ripple-color: rgba(19, 83, 83, 1);
+  --mat-mdc-slider-focus-ripple-color: rgba(19, 83, 83, 0);
+}
+
+
+/* Navigation link styles */
+nav a {
+  padding: 5px 10px;
+  text-decoration: none;
+  margin-right: 10px;
+  margin-top: 10px;
+  display: inline-block;
+  background-color: #e8e8e8;
+  color: #3d3d3d;
+  border-radius: 4px;
+}
+
+nav a:hover {
+  color: white;
+  background-color: #42545C;
+}
+
+nav a.active {
+  background-color: black;
+  color: white;
+}
+
+hr {
+  margin: 1.5rem 0;
+}
+
+input[type="text"] {
+  box-sizing: border-box;
+  width: 100%;
+  padding: .5rem;
+}
+
+
+/*
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at https://angular.io/license
+*/
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}

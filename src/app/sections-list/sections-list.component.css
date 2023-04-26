@@ -1,4 +1,4 @@
-/* ProfileEditorComponent's private CSS styles */
+/* SectionsListComponent's private CSS styles */
 
 .container {
   width: 600px;
@@ -10,18 +10,8 @@
   linear-gradient(0deg, #E0E0E0, #E0E0E0);
 }
 
-form {
-}
-
 label {
   display: block;
   margin: .5em 0;
   font-weight: bold;
 }
-
-
-/*
-Copyright Google LLC. All Rights Reserved.
-Use of this source code is governed by an MIT-style license that
-can be found in the LICENSE file at https://angular.io/license
-*/

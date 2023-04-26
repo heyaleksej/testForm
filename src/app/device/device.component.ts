@@ -5,7 +5,6 @@ import {FormBuilder, FormGroup} from "@angular/forms";
   selector: 'app-device-form',
   templateUrl: './device.component.html',
   styleUrls: ['./device.component.css'],
-  changeDetection: ChangeDetectionStrategy.OnPush
 
 })
 export class DeviceFormComponent {
@@ -15,11 +14,7 @@ export class DeviceFormComponent {
 
   constructor(
     private fb: FormBuilder,
-    private cdRef: ChangeDetectorRef
   ) {
-    this.deviceForm = this.fb.group({
-      device: this.fb.array([])
-    });
     const initialDeviceGroup = this.fb.group({
       voltage: '',
       conditions: '',
@@ -28,6 +23,9 @@ export class DeviceFormComponent {
       repeat: ''
     });
     this.devices.push(initialDeviceGroup);
+    this.deviceForm = this.fb.group({
+      device: this.fb.array([initialDeviceGroup])
+    });
   }
 
   addDevice() {
@@ -41,12 +39,10 @@ export class DeviceFormComponent {
     this.devices.push(deviceGroup);
     this.devicesList.push('newDevice' + (this.devices.length + 1))
     this.deviceForm.setControl('device', this.fb.array(this.devices));
-    this.cdRef.markForCheck();
   }
   deleteDevice(index: number) {
     this.devices.splice(index, 1);
     this.devicesList.splice(index, 1);
     this.deviceForm.setControl('device', this.fb.array(this.devices));
-    this.cdRef.markForCheck();
   }
 }
