@@ -1,0 +1,29 @@
+.label {
+  height: 16px;
+  top: 142px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  margin-bottom: 9px;
+  display: flex;
+  align-items: center;
+  color: #000000;
+  opacity: 0.74;
+}
+
+.select {
+  width: 262px;
+  height: 36px;
+}
+
+::ng-deep .ng-select .ng-select-container {
+  border-radius: 0 !important;
+  border: 1px solid rgba(218, 218, 218, 1) !important;
+}
+
+::ng-deep .ng-select#color .ng-select-container {
+  background-color: rgba(255, 246, 214, 1) !important;
+}
+

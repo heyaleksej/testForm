@@ -1,0 +1,7 @@
+<div>
+  <div class="stepper-input-wrapper">
+    <button class="dec" (click)="decrement()">‐</button>
+    <input class="input" type="number" [ngModel]="value" (ngModelChange)="onValueChange($event)">
+    <button class="inc" (click)="increment()">+</button>
+  </div>
+</div>

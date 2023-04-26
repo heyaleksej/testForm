@@ -1,0 +1,64 @@
+<div class="wrapper">
+  <div class="title">
+    Electrolyte:
+  </div>
+  <div class="input-wrapper">
+    <div class="control-wrapper">
+      <div class="label">Volume:</div>
+      <div class="volume-wrapper">
+        <mat-slider
+          [disabled]="disabled"
+          [max]="max"
+          [min]="min"
+          [step]="step"
+          [discrete]="thumbLabel"
+          [showTickMarks]="showTicks">
+          <input matSliderThumb [(ngModel)]="value">
+        </mat-slider>
+        <app-input-with-unit [value]="value"
+                             (valueChange)="value"
+                             unit="ml"
+        ></app-input-with-unit>
+      </div>
+    </div>
+    <div class="control-wrapper">
+      <div class="label">Temperature:</div>
+      <app-input-with-unit
+        unit="°C"
+        customWidth="260px"
+        [validator]="validateRange(-273, 3000)"
+      ></app-input-with-unit>
+    </div>
+  </div>
+  <div class="line control-wrapper"></div>
+  <div class="control-wrapper">
+    <div class="composition">composition</div>
+    <mat-radio-group
+      aria-labelledby="radio-group-label"
+      class="radio-group"
+      [(ngModel)]="selectedOption"
+      >
+      <mat-radio-button class="radio-button"
+                        *ngFor="let option of options"
+                        [value]="option.label"
+      >
+        <span [ngClass]="{'selected': option.label === selectedOption, 'unselected': option.label !== selectedOption}">
+      {{ option.label }}
+    </span>
+      </mat-radio-button>
+    </mat-radio-group>
+    <div class="scan-button-wrapper">
+      <app-button label="SCAN LABEL"></app-button>
+    </div>
+  </div>
+  <div class="input-wrapper">
+    <div class="block-container">
+      <div class="label">Reagent:</div>
+      <app-select-menu color="color"></app-select-menu>
+    </div>
+    <div class="block-container">
+      <div class="label">Concentration/purity:</div>
+      <app-select-menu label="Concentration/purity" unit="%" color="color"></app-select-menu>
+    </div>
+  </div>
+</div>

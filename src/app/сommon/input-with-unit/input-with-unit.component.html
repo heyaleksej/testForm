@@ -1,0 +1,8 @@
+<div class="input-with-unit-wrapper">
+  <input class="input"
+         [(ngModel)]="value"
+         (change)="onInputChange"
+         [ngStyle]="{'width': customWidth}">
+  <div class="button-line"></div>
+  <div class="suffix">{{unit}}</div>
+</div>

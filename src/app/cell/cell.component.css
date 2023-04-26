@@ -1,0 +1,11 @@
+.wrapper{
+  height: 148px;
+  display: block;
+  box-sizing: border-box;
+}
+
+.input-wrapper{
+  display: flex;
+}
+
+

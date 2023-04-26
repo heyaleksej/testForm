@@ -1,0 +1,46 @@
+<div class="title">Device:</div>
+<div class="control-wrapper">
+  <app-select-menu customWidth="238px" [options]="devicesList"></app-select-menu>
+
+  <form [formGroup]="deviceForm" class="add-form">
+    <div formGroupName="device" *ngFor="let device of devices; let i=index">
+      <div [formGroupName]="i">
+        <div class="flexbox">
+          <div class="block-container">
+            <div class="label-grey">SET VOLTAGE/CURRENT:</div>
+            <app-select-menu customWidth="238px"></app-select-menu>
+          </div>
+          <div class="block-container">
+            <div class="label-grey">CONDITIONS:</div>
+            <app-input-with-unit label="CONDITIONS" unit="V" customWidth="214px"></app-input-with-unit>
+          </div>
+          <button class="remove-button" (click)="deleteDevice(i)">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z" fill="#323232"/>
+            </svg>
+          </button>
+        </div>
+        <div class="down-flexbox">
+          <div class="block-container">
+            <div class="label-grey">DURATION:</div>
+            <app-input-with-unit unit="S" customWidth="161px"></app-input-with-unit>
+          </div>
+          <div class="block-container">
+            <div class="label-grey">RAMP:</div>
+            <app-input-with-unit unit="V/min" customWidth="161px"></app-input-with-unit>
+          </div>
+          <div class="block-container">
+            <div class="label-grey">REPEAT:</div>
+            <app-stepper-input></app-stepper-input>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+  <button class="add-button" (click)="addDevice()">+ Add</button>
+  <div class="cycles-block">
+    <div class="label cycles">Number of cycles:</div>
+    <app-stepper-input></app-stepper-input>
+  </div>
+</div>
+

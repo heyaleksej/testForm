@@ -1,0 +1,68 @@
+.button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 6px 6px 6px 8px;
+  width: 138px;
+  height: 36px;
+  right: 23px;
+  top: 398px;
+  background: #03DAC5;
+  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 0;
+  border: none;
+  margin-right: 23px;
+  cursor: pointer;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 24px;
+  letter-spacing: 1.25px;
+  text-transform: uppercase;
+}
+
+:host-context(.my-custom-button) .button {
+  background-color: red;
+  color: white;
+}
+
+.button.outlined {
+  background-color: transparent;
+  border: 1px solid #03DAC5;
+  color: #03DAC5;
+}
+
+.icon {
+  display: none;
+  width: 24px;
+  height: 24px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.name {
+  width: 100%;
+  height: 24px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 24px;
+  letter-spacing: 1.25px;
+  text-transform: uppercase;
+  color: #000000;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.button.text-icon .icon {
+  display: inline-block;
+}
+
+.button.text-icon .label {
+  padding-right: 0;
+}

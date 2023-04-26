@@ -1,0 +1,15 @@
+<ng-select [items]="options"
+           class="select"
+           bindLabel="name"
+           autofocus
+           [clearable]="false"
+           bindValue="id"
+           [ngStyle]="{'width': customWidth}"
+           [(ngModel)]="selectedOption"
+           id="{{color}}"
+>
+</ng-select>
+<div *ngIf="unit">
+  <div class="button-line-select"></div>
+  <div class="suffix-select">{{unit}}</div>
+</div>

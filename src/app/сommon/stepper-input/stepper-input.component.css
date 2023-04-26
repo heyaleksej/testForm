@@ -1,0 +1,26 @@
+.stepper-input-wrapper{
+  position: relative;
+}
+
+.dec{
+  position: absolute;
+  border: none !important;
+  top: -10px;
+  color: rgba(50, 50, 50, 1);
+}
+
+.input{
+  width: 104px;
+  height: 34px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  padding: 5px 5px 5px 47px;
+  box-sizing: border-box;
+}
+
+.inc{
+  position: absolute;
+  border: none !important;
+  top: -9px;
+  right: 0;
+  color: rgba(50, 50, 50, 1);
+}
